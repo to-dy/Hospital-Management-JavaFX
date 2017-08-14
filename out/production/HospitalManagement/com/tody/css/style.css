@@ -1,0 +1,112 @@
+.white-text{
+    -fx-text-fill: white;
+}
+
+#login_btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-radius: 3;
+    -fx-border-color: white;
+}
+
+#login_btn:hover {
+    -fx-background-color: whitesmoke;
+    -fx-text-fill: black;
+}
+
+#login_btn:pressed {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.fd-panel{
+    -fx-background-color: white;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: #c03844;
+
+}
+
+#logOut_btn{
+    -fx-background-color: transparent;
+    -fx-border-color: #7f1c27;
+    -fx-border-radius: 0;
+    -fx-text-fill: #7f1c27;
+}
+
+#logOut_btn:hover{
+    -fx-background-color: #7f1c27;
+    -fx-text-fill: white;
+}
+
+.c-text-field{
+    -fx-background-color: #7f1c27 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+.c-text-field:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: #7f1c27;
+    -fx-border-radius: 0;
+}
+
+.fd-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #7f1c27;
+    -fx-border-radius: 0;
+    -fx-text-fill: #7f1c27;
+}
+
+.fd-btn:hover {
+    -fx-background-color: #7f1c27;
+    -fx-text-fill: white;
+}
+
+.fd-btn:armed{
+    -fx-background-color: white;
+    -fx-text-fill: #7f1c27;
+}
+
+.ad-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-radius: 0;
+    -fx-text-fill: white;
+}
+
+.ad-btn:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #7f1c27;
+}
+
+.ad-btn:armed{
+    -fx-background-color: #7f1c27;
+    -fx-text-fill: white;
+}
+
+.transparent-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #7f1c27;
+    -fx-border-radius: 0;
+    -fx-text-fill: #7f1c27;
+}
+
+.transparent-btn:hover {
+    -fx-background-color: #7f1c27;
+    -fx-text-fill: white;
+}
+
+.transparent-btn:armed{
+    -fx-background-color: white;
+    -fx-text-fill: #7f1c27;
+}
+
+.ad-field{
+    -fx-background-color: transparent;
+    -fx-border-color: white ;
+    -fx-text-fill: white;
+}
+.ad-field:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: #7f1c27;
+    -fx-border-radius: 0;
+}
+

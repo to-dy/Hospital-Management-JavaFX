@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="350.0" minWidth="450.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tody.controllers.ViewTreatmentDialogController">
+<DialogPane minHeight="350.0" prefHeight="350.0" prefWidth="450.0">
+   <content>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+               <VBox BorderPane.alignment="CENTER">
+                  <children>
+                     <Label text="Records">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font></Label>
+                     <ScrollPane hbarPolicy="NEVER" prefWidth="125.0">
+                        <content>
+                        <ListView fx:id="recordsListView" prefHeight="310.0" prefWidth="120.0" />
+                        </content>
+                     </ScrollPane>
+                  </children>
+               </VBox>
+         </left>
+         <center>
+            <VBox prefWidth="305.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                     <Pane>
+                        <children>
+                           <Label text="Doctor :">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="docLabel" layoutX="60.0" />
+                        </children>
+                     </Pane>
+                     <Pane>
+                        <children>
+                        <Label text="Date : ">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="dateLabel" layoutX="59.0" />
+                        </children>
+                     </Pane>
+                     <Pane>
+                        <children>
+                           <Label text="Doctor's Note :">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                           </Label>
+                        <TextArea fx:id="detailsTxtFd" editable="false" layoutY="20.0" prefHeight="211.0" prefWidth="300.0" wrapText="true" />
+                        </children>
+                     </Pane>
+               </children>
+                  <padding>
+                     <Insets left="5.0" top="15.0" />
+                  </padding>
+            </VBox>
+         </center>
+      </BorderPane>
+   </content>
+</DialogPane>
+</AnchorPane>

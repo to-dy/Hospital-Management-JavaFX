@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tody.controllers.MainController">
+
+<BorderPane fx:id="borderPane" prefHeight="500.0" prefWidth="700.0">
+   <right>
+      <VBox prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: c03844;" BorderPane.alignment="CENTER">
+         <children>
+               <AnchorPane>
+                  <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="95.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/login.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+                  <padding>
+                     <Insets bottom="15.0" />
+                  </padding>
+                  <VBox.margin>
+                     <Insets top="45.0" />
+                  </VBox.margin>
+               </AnchorPane>
+            <GridPane alignment="CENTER_RIGHT" maxWidth="280.0" prefWidth="200.0" style="-fx-background-color: rgba(11, 14, 20, 0.30); -fx-background-radius: 10;" vgap="10.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="90.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="190.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" styleClass="white-text" text="User Login" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                        <font>
+                           <Font name="Roboto Light" size="20.0" />
+                        </font></Label>
+                  <Label styleClass="white-text" text="User ID" GridPane.rowIndex="1" />
+                   <TextField fx:id="userIdField" maxWidth="150.0" prefHeight="25.0" prefWidth="150.0" promptText="Enter UserId" style="-fx-background-color: rgba( 242, 241, 241, 0.853 );" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label styleClass="white-text" text="Role" GridPane.rowIndex="2" />
+                   <FlowPane alignment="CENTER_LEFT" hgap="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                       <children>
+                           <!--<fx:define>-->
+                               <!--<ToggleGroup fx:id="userType"/>-->
+                           <!--</fx:define>-->
+                           <RadioButton mnemonicParsing="false" styleClass="white-text" text="FD">
+                              <toggleGroup>
+                                 <ToggleGroup fx:id="userType" />
+                              </toggleGroup></RadioButton>
+                           <RadioButton mnemonicParsing="false" styleClass="white-text" text="DA" toggleGroup="$userType" />
+                           <RadioButton mnemonicParsing="false" styleClass="white-text" text="DOC" toggleGroup="$userType" />
+                       </children>
+                   </FlowPane>
+                   <Label alignment="CENTER" styleClass="white-text" text="Password" textAlignment="CENTER" GridPane.rowIndex="3" />
+                  <PasswordField fx:id="passwordField" maxWidth="150.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: rgba( 242, 241, 241, 0.853 );" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <Label fx:id="loginError" alignment="BOTTOM_LEFT" styleClass="white-text" text="Error Message!" visible="false" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                        <graphic>
+                           <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true">
+                              <image>
+                                 <Image url="@../images/warning-icon.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Label>
+                   <Button id="login_btn" fx:id="login_btn" disable="true" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="73.0" text="Sign In" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                       <GridPane.margin>
+                           <Insets right="5.0" top="10.0" />
+                       </GridPane.margin>
+                   </Button>
+               </children>
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+                  </padding>
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+            </GridPane>
+               <Pane>
+                  <children>
+                     <Hyperlink fx:id="adminLogin" layoutX="194.0" onAction="#loadAdminLogin" text="Admin Login" textFill="WHITE" underline="false" />
+                  </children>
+                  <VBox.margin>
+                     <Insets top="50.0" />
+                  </VBox.margin>
+               </Pane>
+         </children>
+            <padding>
+               <Insets left="15.0" right="15.0" top="30.0" />
+            </padding>
+      </VBox>
+   </right>
+      <left>
+         <StackPane BorderPane.alignment="CENTER">
+            <children>
+               <ImageView fitHeight="500.0" fitWidth="400.0" pickOnBounds="true">
+                  <image>
+                     <Image url="@../images/background.png" />
+                  </image>
+               </ImageView>
+               <VBox alignment="TOP_CENTER" spacing="20.0" StackPane.alignment="CENTER">
+                  <children>
+                     <ImageView fitHeight="200.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/logo.png" />
+                        </image>
+                     </ImageView>
+                     <Label text="XYZ HOSPITAL" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                        <font>
+                           <Font name="Ubuntu" size="39.0" />
+                        </font>
+                     </Label>
+                  </children>
+                  <StackPane.margin>
+                     <Insets top="55.0" />
+                  </StackPane.margin>
+               </VBox>
+            </children>
+         </StackPane>
+      </left>
+</BorderPane>
+</AnchorPane>

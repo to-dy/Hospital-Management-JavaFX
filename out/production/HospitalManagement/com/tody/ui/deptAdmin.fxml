@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tody.controllers.DeptAdminController">
+    <children>
+        <BorderPane fx:id="borderPane" prefHeight="500.0" prefWidth="700.0">
+            <left>
+                <AnchorPane prefWidth="200.0" styleClass="fd-panel" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox prefWidth="200.0">
+                            <children>
+                                <HBox prefHeight="35.0" prefWidth="300.0" spacing="10.0" styleClass="white-text">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="USER ID :" textAlignment="JUSTIFY">
+                                            <font>
+                                                <Font name="Ubuntu Condensed" size="16.0" />
+                                            </font>
+                                        </Text>
+                                        <Label fx:id="userId" text="userID">
+                                            <font>
+                                                <Font name="Ubuntu" size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" top="15.0" />
+                                    </padding>
+                                </HBox>
+                                <HBox prefHeight="25.0" prefWidth="300.0" spacing="10.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NAME   :" wrappingWidth="51.451171875">
+                                            <font>
+                                                <Font name="Ubuntu Condensed" size="16.0" />
+                                            </font>
+                                        </Text>
+                                        <Label fx:id="userName" text="userName">
+                                            <font>
+                                                <Font name="Ubuntu" size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" top="10.0" />
+                                    </padding>
+                                </HBox>
+                        <Pane prefHeight="252.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" layoutY="84.0" prefWidth="200.0" spacing="25.0">
+                                 <children>
+                                    <Button fx:id="newRegBtn" mnemonicParsing="false" onAction="#viewNewRegistration" prefHeight="30.0" prefWidth="135.0" style="-fx-border-radius: 3;" styleClass="transparent-btn" text="New Registration" />
+                                    <Button fx:id="viewPatientBtn" mnemonicParsing="false" onAction="#viewPatientUI" prefHeight="30.0" prefWidth="135.0" style="-fx-border-radius: 3;" styleClass="transparent-btn" text="View Patient" />
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </Pane>
+                            </children>
+                        </VBox>
+                        <Button id="logOut_btn" fx:id="logOutBtn" layoutX="16.0" layoutY="323.0" minHeight="50.0" mnemonicParsing="false" onAction="#logOut" prefWidth="170.0" text="Log Out">
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="27.0" preserveRatio="true">
+                                    <Image url="@../images/logout.png" />
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </left>
+            <bottom>
+                <Pane prefHeight="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="100.0" fitWidth="701.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@../images/hm3.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </bottom>
+         <right>
+            <StackPane prefWidth="500.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="mainView" prefHeight="400.0" prefWidth="498.0" style="-fx-background-color: white;">
+                     <children>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="400.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/background2.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Welcome!" StackPane.alignment="TOP_LEFT">
+                                 <font>
+                                    <Font name="Ubuntu Condensed" size="34.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Label fx:id="userName1" text="User Name here" StackPane.alignment="TOP_LEFT">
+                                 <font>
+                                    <Font name="Ubuntu Light" size="24.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="20.0" top="50.0" />
+                                 </StackPane.margin>
+                              </Label>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+                  <TabPane fx:id="viewPatient" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: white;" stylesheets="@../css/style.css" tabClosingPolicy="UNAVAILABLE" visible="false">
+                     <tabs>
+                        <Tab text="View Patient">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <Pane prefHeight="66.0" prefWidth="498.0">
+                                       <children>
+                                          <Label layoutX="79.0" layoutY="28.0" text="Enter Patients IPID :">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="usrInput" layoutX="270.0" layoutY="20.0" onAction="#viewPatient" styleClass="c-text-field" stylesheets="@../css/style.css" />
+                                       </children>
+                                    </Pane>
+                                    <GridPane fx:id="gridPane" alignment="CENTER" layoutX="100.0" layoutY="80.0" prefWidth="300.0" vgap="10.0" visible="false">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="76.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="224.0" minWidth="10.0" prefWidth="224.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="IPID :" />
+                                          <TextField fx:id="viewID" editable="false" styleClass="c-text-field" stylesheets="@../css/style.css" GridPane.columnIndex="1" />
+                                          <Label text="NAME :" GridPane.rowIndex="1" />
+                                          <TextField fx:id="viewName" editable="false" styleClass="c-text-field" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Label text="AGE :" GridPane.rowIndex="2" />
+                                          <TextField fx:id="viewAge" editable="false" styleClass="c-text-field" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label text="ADDRESS :" GridPane.rowIndex="3" />
+                                          <TextField fx:id="viewAddress" editable="false" styleClass="c-text-field" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label text="PHONE :" GridPane.rowIndex="4" />
+                                          <TextField fx:id="viewPhone" editable="false" styleClass="c-text-field" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <Button mnemonicParsing="false" onAction="#resetPatientView" prefHeight="27.0" prefWidth="80.0" styleClass="fd-btn" text="RESET" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                                             <GridPane.margin>
+                                                <Insets top="30.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab onSelectionChanged="#viewPatients" text="View All Patients">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane layoutX="7.0" layoutY="14.0" prefHeight="372.0" prefWidth="500.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <TableView fx:id="patientsTable">
+                                             <columns>
+                                                <TableColumn fx:id="idCol" editable="false" maxWidth="1.7976931348623157E308" minWidth="70.0" prefWidth="70.0" text="IPID" />
+                                                <TableColumn fx:id="nameCol" minWidth="155.0" prefWidth="155.0" text="NAME" />
+                                                <TableColumn fx:id="ageCol" maxWidth="-1.0" minWidth="35.0" prefWidth="35.0" text="AGE" />
+                                                <TableColumn fx:id="addressCol" minWidth="135.0" prefWidth="75.0" text="ADDRESS" />
+                                                <TableColumn fx:id="phoneCol" minWidth="95.0" prefWidth="95.0" text="PHONE" />
+                                             </columns>
+                                          </TableView>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <AnchorPane fx:id="registrationView" maxHeight="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: white;" stylesheets="@../css/style.css" visible="false">
+                     <children>
+                        <Pane layoutX="166.0" layoutY="23.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="IP Registration" textAlignment="CENTER" textOrigin="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <GridPane layoutX="100.0" layoutY="70.0" prefWidth="320.0" vgap="5.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="107.0" prefWidth="114.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="186.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="opidLabel" text="OP ID :" />
+                              <TextField fx:id="opidTxtFd" onAction="#validateOPID" styleClass="c-text-field" GridPane.columnIndex="1" />
+                              <Label fx:id="nameLabel" text="NAME :" visible="false" GridPane.rowIndex="1" />
+                              <TextField fx:id="nameTxtFd" styleClass="c-text-field" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="ageLabel" text="AGE :" visible="false" GridPane.rowIndex="2" />
+                              <TextField fx:id="ageTxtFd" styleClass="c-text-field" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="reasonLabel" text="REASON FOR VISIT :" visible="false" GridPane.rowIndex="3" />
+                              <TextField fx:id="reasonTxtFd" styleClass="c-text-field" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="phoneLabel" text="PHONE NO :" visible="false" GridPane.rowIndex="4" />
+                              <TextField fx:id="phoneTxtFd" styleClass="c-text-field" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="addressLabel" text="ADDRESS :" visible="false" GridPane.rowIndex="5" />
+                              <TextField fx:id="addressTxtFd" layoutX="130.0" layoutY="48.0" styleClass="c-text-field" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="referLabel" text="REFER TO DOC :" visible="false" GridPane.rowIndex="6" />
+                              <ChoiceBox fx:id="referBox" onAction="#onSelect" prefWidth="150.0" styleClass="c-text-field" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <HBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                 <children>
+                                    <Label fx:id="ipidLabel" text="IP ID :" visible="false" />
+                                    <TextField fx:id="ipidTxtFd" editable="false" prefHeight="27.0" prefWidth="94.0" style="-fx-background-insets: 0; -fx-border-color: #7f1c27; -fx-border-radius: 3; -fx-background-color: white;" visible="false" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+                                 <GridPane.margin>
+                                    <Insets top="5.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <ButtonBar prefHeight="40.0">
+                                       <buttons>
+                                          <Button mnemonicParsing="false" onAction="#reset" prefWidth="100.0" styleClass="transparent-btn" text="RESET" />
+                                          <Button mnemonicParsing="false" onAction="#newPatient" prefWidth="100.0" styleClass="transparent-btn" text="SUBMIT" />
+                                       </buttons>
+                                    </ButtonBar>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </right>
+
+        </BorderPane>
+    </children>
+
+</AnchorPane>
