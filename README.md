@@ -17,9 +17,9 @@ The concerned departmental assistant then makes the entry of the patient in the 
 ![ER Diagram](https://github.com/to-dy/test/blob/master/exImg/hmERDiagram.JPG?raw=true "The ER Diagram")
 
 #### Executable JAR File
- * Get the .jar file [Here](../blob/master/LICENSE)
+ * Get the .jar file [Here](../blob/master/HospitalManagement.jar)
 
 ##### Running the file
-To use the sample [database]() it has to be in the same file directory as the JAR file! 
+To use the sample [database](../blob/master/HospitalManagement.db) it has to be in the same file directory as the JAR file! 
 
 
